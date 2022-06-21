@@ -3,6 +3,13 @@ vim.g.mapleader = " "
 --local map = vim.api.nvim_set_keymap
 local opt = {noremap = true, silent = true }
 
+-- nvim-lspconfig
+local opts = { noremap=true, silent=true }
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+
 -- nvim-surround
 vim.keymap.set("n", "ys", require('nvim-surround').insert_surround) -- Surrounds a text object with a delimiter pair, i.e. ysiw]
 vim.keymap.set("n", "ds", require('nvim-surround').delete_surround) -- Delete a surrounding delimiter, i.e. ds(
