@@ -11,7 +11,7 @@ vim.keymap.set("x", "S", require('nvim-surround').insert_surround) -- Surrounds 
 
 -- nvimTree
 vim.keymap.set('n', '<A-e>', ':NvimTreeToggle<CR>', opt)
---map('n', '<leader>r', ':NvimTreeRefresh<CR>', opt)
+vim.keymap.set('n', '<leader>r', ':NvimTreeRefresh<CR>', opt)
 --map('n', '<leader>n', ':NvimTreeFindFile<CR>', opt)
 
 -- bufferline

@@ -1,8 +1,10 @@
 require('plugins')
 require('keybindings')
+require('plugin-config/lsp-installer')
+require('plugin-config/lspconfig-clangd')
 require('plugin-config/nvim-tree')
 require('plugin-config/kanagawa')
-require('plugin-config/indent_blackline')
+require('plugin-config/indent-blackline')
 require('plugin-config/bufferline')
 require('plugin-config/lualine')
 
