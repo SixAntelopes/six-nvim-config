@@ -1,8 +1,12 @@
 require('plugins')
+require('plugin-config/toggleterm')
+require('plugin-config/alpha')
+require('plugin-config/hop')
 require('keybindings')
 require('plugin-config/lsp-installer')
 require('plugin-config/lspconfig')
 require('plugin-config/cmp')
+require('plugin-config/nvim-treesitter')
 require('plugin-config/nvim-tree')
 require('plugin-config/kanagawa')
 require('plugin-config/indent-blackline')
@@ -58,3 +62,6 @@ vim.go.showtabline = 2
 --split下和右
 vim.go.splitbelow = true
 vim.go.splitright = true
+
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'

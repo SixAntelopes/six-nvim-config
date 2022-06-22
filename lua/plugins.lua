@@ -1,5 +1,11 @@
-return require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim' --Package manager
+require('packer').startup(function(use)
+	use 'wbthomason/packer.nvim'
+	use { 'akinsho/toggleterm.nvim', tag = 'v1.*' }
+	use 'goolord/alpha-nvim'
+	use {
+		'phaazon/hop.nvim',
+		branch = 'v1' -- optional but strongly recommended
+	}
 	use 'kylechui/nvim-surround'
 	use {
 		'williamboman/nvim-lsp-installer',
