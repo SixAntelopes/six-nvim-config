@@ -1,14 +1,13 @@
 vim.g.mapleader = " "
 
 --local map = vim.api.nvim_set_keymap
-local opt = {noremap = true, silent = true }
+local opt = { noremap = true, silent = true }
 
 -- nvim-lspconfig
-local opts = { noremap=true, silent=true }
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opt)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opt)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opt)
+--vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opt)
 
 -- nvim-surround
 vim.keymap.set("n", "ys", require('nvim-surround').insert_surround) -- Surrounds a text object with a delimiter pair, i.e. ysiw]
@@ -30,4 +29,3 @@ vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", opt)
 vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", opt)
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", opt)
-

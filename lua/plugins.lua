@@ -1,21 +1,31 @@
-return require('packer').startup(function()
+return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim' --Package manager
 	use 'kylechui/nvim-surround'
 	use {
 		'williamboman/nvim-lsp-installer',
 		'neovim/nvim-lspconfig'
 	}
+
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/nvim-cmp'
+	--For vsnip users.
+	use 'hrsh7th/cmp-vsnip'
+	use 'hrsh7th/vim-vsnip'
+
 	use {
-			'nvim-treesitter/nvim-treesitter',
-			run = ':TSUpdate'
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate'
 	}
 	use {
 		'nvim-telescope/telescope.nvim',
-		requires = { {'nvim-lua/plenary.nvim'} }
+		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
 	use {
 		'kyazdani42/nvim-tree.lua',
-		requires = {'kyazdani42/nvim-web-devicons'}
+		requires = { 'kyazdani42/nvim-web-devicons' }
 	}
 	use 'rebelot/kanagawa.nvim'
 	use 'lukas-reineke/indent-blankline.nvim'

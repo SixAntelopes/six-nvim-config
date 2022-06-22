@@ -1,8 +1,8 @@
 require('plugins')
 require('keybindings')
 require('plugin-config/lsp-installer')
-require('plugin-config/lspconfig-clangd')
-require('plugin-config/lspconfig-sumneko_lua')
+require('plugin-config/lspconfig')
+require('plugin-config/cmp')
 require('plugin-config/nvim-tree')
 require('plugin-config/kanagawa')
 require('plugin-config/indent-blackline')
@@ -31,8 +31,8 @@ vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
 
-vim.go.shiftround = true  --缩进保持整数倍
-vim.cmd("filetype plugin indent on")  --跟据类型加载插件与缩进
+vim.go.shiftround = true --缩进保持整数倍
+vim.cmd("filetype plugin indent on") --跟据类型加载插件与缩进
 
 --搜索
 vim.go.ignorecase = true
@@ -58,4 +58,3 @@ vim.go.showtabline = 2
 --split下和右
 vim.go.splitbelow = true
 vim.go.splitright = true
-
