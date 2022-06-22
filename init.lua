@@ -45,7 +45,7 @@ vim.go.showmode = false
 vim.go.cmdheight = 2
 
 --代码补全
-vim.go.completeopt = "menu,menuone,noinsert,noselect"
+vim.go.completeopt = "menu,menuone,noselect"
 
 --开启真色彩
 vim.go.termguicolors = true
